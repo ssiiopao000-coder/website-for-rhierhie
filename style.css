@@ -1,0 +1,45 @@
+body{
+   background-color: lightblue;
+}
+
+   h1, h2 {
+    color: darkblue;
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+   
+}
+
+.box {
+    background-color: pink; ;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+    font-size: 18px;
+    line-height: 1.5;
+    box-shadow: 10px 10px 20px rgba(50, 83, 247, 0.2);
+}
+.navigation {
+    display: flex;
+    background-color: darkblue;
+    height: 100px;
+    justify-content: center;
+    gap: 20px;
+
+}
+.navigation div{
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    font-size: 20px;
+}
+.div1 {flex-grow: 1;}
+   .div2 {flex-grow: 1;}
+   .div3 {flex-grow: 1;} 
+   
+    
+
