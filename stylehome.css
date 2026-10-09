@@ -1,0 +1,364 @@
+/* ==============================
+   RESET
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background: #F3FAFF;
+    color: #10233F;
+}
+
+
+/* ==============================
+   SIDEBAR
+============================== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    padding: 30px 20px;
+
+    background: linear-gradient(
+        180deg,
+        #0B1F3A,
+        #164E8C
+    );
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1000;
+
+    box-shadow: 4px 0 20px rgba(11, 31, 58, 0.2);
+}
+
+
+/* ==============================
+   WEBSITE TITLE
+============================== */
+
+.logo {
+    text-align: center;
+    margin-bottom: 35px;
+
+    color: #F3FAFF;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.logo p {
+    font-size: 12px;
+    color: #BDE3F7;
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+
+    color: #DCEAF5;
+
+    padding: 13px 15px;
+
+    border-radius: 12px;
+
+    font-size: 15px;
+
+    transition: 0.3s ease;
+}
+
+
+/* HOVER */
+
+.nav-menu a:hover {
+    background: #6FAED9;
+    color: #0B1F3A;
+
+    transform: translateX(5px);
+}
+
+
+/* ACTIVE PAGE */
+
+.nav-menu a.active {
+    background: #BDE3F7;
+    color: #0B1F3A;
+
+    font-weight: bold;
+}
+
+
+/* ==============================
+   MAIN CONTENT
+============================== */
+
+.main-content {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    padding: 50px;
+}
+
+
+/* ==============================
+   PAGE CONTAINER
+============================== */
+
+.page {
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+}
+
+
+/* ==============================
+   CONTENT CARD
+============================== */
+
+.card {
+    background: white;
+
+    border-radius: 25px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 30px rgba(11, 31, 58, 0.12);
+
+    border: 1px solid #DCEAF5;
+}
+
+
+/* ==============================
+   TITLE
+============================== */
+
+.page-title {
+    text-align: center;
+
+    color: #164E8C;
+
+    font-size: 38px;
+
+    margin-bottom: 15px;
+}
+
+.page-subtitle {
+    text-align: center;
+
+    color: #6FAED9;
+
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   BUTTON
+============================== */
+
+.button {
+    display: inline-block;
+
+    padding: 12px 22px;
+
+    border-radius: 30px;
+
+    background: #164E8C;
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #6FAED9;
+    color: #0B1F3A;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   MOBILE
+   iPhone 13 and similar
+============================== */
+
+@media (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Sidebar becomes top navigation */
+
+    .sidebar {
+        position: fixed;
+
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: auto;
+
+        padding: 12px 15px;
+
+        flex-direction: row;
+
+        align-items: center;
+
+        justify-content: space-between;
+
+        border-radius: 0 0 18px 18px;
+    }
+
+
+    .logo {
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .logo h1 {
+        font-size: 18px;
+    }
+
+    .logo p {
+        font-size: 10px;
+    }
+
+
+    /* Horizontal navigation */
+
+    .nav-menu {
+        flex-direction: row;
+
+        gap: 5px;
+
+        overflow-x: auto;
+
+        max-width: 60%;
+
+        scrollbar-width: none;
+    }
+
+    .nav-menu::-webkit-scrollbar {
+        display: none;
+    }
+
+    .nav-menu a {
+        white-space: nowrap;
+
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+    .nav-menu a:hover {
+        transform: none;
+    }
+
+
+    /* Main content */
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 90px 15px 30px;
+    }
+
+
+    .card {
+        padding: 25px 18px;
+
+        border-radius: 20px;
+    }
+
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .page-subtitle {
+        font-size: 14px;
+    }
+
+    .button {
+        padding: 11px 18px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* ==============================
+   SMALL PHONES
+============================== */
+
+@media (max-width: 430px) {
+
+    .sidebar {
+        padding: 10px 12px;
+    }
+
+    .logo h1 {
+        font-size: 16px;
+    }
+
+    .logo p {
+        display: none;
+    }
+
+    .nav-menu {
+        max-width: 65%;
+    }
+
+    .nav-menu a {
+        padding: 7px 10px;
+
+        font-size: 11px;
+    }
+
+    .main-content {
+        padding: 80px 12px 25px;
+    }
+
+    .card {
+        padding: 20px 15px;
+    }
+
+    .page-title {
+        font-size: 25px;
+    }
+}

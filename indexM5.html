@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Our Monthsary 💙</title>
+
+    <link rel="stylesheet" href="styleM5.css">
+</head>
+
+<body>
+
+    <!-- Background Decorations -->
+    <div class="hearts">
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+        <span>♡</span>
+    </div>
+
+
+    <!-- CARD SECTION -->
+    <section class="card-section">
+
+        <h1>For My Love 💙</h1>
+        <p class="instruction">Tap the card to open it</p>
+
+        <div class="card" id="card">
+
+            <!-- Envelope -->
+            <div class="envelope">
+
+                <!-- Letter -->
+                <div class="letter">
+
+                    <h2>Happy Monthsary, Baby! 💙</h2>
+
+                    <p>
+                        Hi, baby.
+                    </p>
+
+                    <p>
+                        Another month with you means another month
+                        filled with memories, laughter, and moments
+                        that I will always treasure.
+                    </p>
+
+                    <p>
+                        Thank you for staying with me and for being
+                        someone who makes my days a little brighter.
+                    </p>
+
+                    <p>
+                        I may not always be perfect, but I promise
+                        that I will always try to become a better
+                        boyfriend for you.
+                    </p>
+
+                    <p>
+                        I love you so much, baby. 💙
+                    </p>
+
+                    <p class="ending">
+                        Forever yours,<br>
+                        Your Love ♡
+                    </p>
+
+                </div>
+
+                <!-- Envelope Front -->
+                <div class="envelope-front">
+
+                    <div class="heart">
+                        ♥
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MEMORY SECTION -->
+    <section class="memories" id="memories">
+
+        <h2>Our Little Memories 💙</h2>
+
+        <p>
+            Every picture holds a memory that I want to keep forever.
+        </p>
+
+        <div class="photo-container">
+
+            <div class="photo">
+                <img src="images/photo1.jpg" alt="Our memory">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo2.jpg" alt="Our memory">
+            </div>
+
+            <div class="photo">
+                <img src="images/photo3.jpg" alt="Our memory">
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MUSIC -->
+
+    <audio id="music" loop>
+        <source src="music/monthsary-song.mp3" type="audio/mpeg">
+    </audio>
+
+
+    <script>
+
+        const card = document.getElementById("card");
+        const music = document.getElementById("music");
+        const memories = document.getElementById("memories");
+
+        card.addEventListener("click", function () {
+
+            card.classList.toggle("open");
+
+            if (card.classList.contains("open")) {
+
+                music.play();
+
+                setTimeout(function () {
+                    memories.classList.add("show");
+                }, 1200);
+
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
